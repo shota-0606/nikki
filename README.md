@@ -12,4 +12,21 @@
 * Table Calendar (カレンダー機能)
 
 
-#原因対応再テスト結果19LineChartBarData で isCurved: true（曲線の描画）が有効なため、感情レベルが上限（5）や下限（1）に達した際、曲線のふくらみ制御点が minY・maxY の描画枠線を越えてはみ出してしまう。グラフを直線描画にするために isCurved: false に変更するか、曲線の一方ではみ出しを防ぐ preventCurveOverShooting: true を各 LineChartBarData に追加する。○
+## 🐛 既知の不具合と修正手順（テスト不合格ケース）
+
+### 感情グラフが描画枠からはみ出す問題
+感情レベルが最大値（5）や最小値（1）のときに、グラフの曲線設定（`isCurved: true`）の影響で線のふくらみが上下の枠線からはみ出してしまう挙動が発生します。
+
+#### 🛠️ 修正用コード
+`ChartPage` クラス内にある3箇所の `LineChartBarData` に対し、`preventCurveOverShooting: true` を追加することで、枠内からはみ出さないように補正できます。
+
+```dart
+// 修正例（うれしいグラフの場合。おこった・かなしい も同様に変更）
+LineChartBarData(
+  spots: happySpots, 
+  color: Colors.pink, 
+  barWidth: 4, 
+  isCurved: true, 
+  preventCurveOverShooting: true, // 👈 この行を追加してはみ出しを防止
+  dotData: const FlDotData(show: true),
+),
