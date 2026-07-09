@@ -1,17 +1,12 @@
-# flutter_application_1
+# 日記感情アプリ
 
-A new Flutter project.
+日々の出来事を感情と一緒に記録できる日記アプリです。
 
-## Getting Started
+## ✨ 機能
+* カレンダーから日付を選んで日記を書く
+* 過去の日記を振り返る
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 使用技術
+* Flutter (アプリ開発)
+* Firebase (データの保存)
+* Table Calendar (カレンダー機能)
