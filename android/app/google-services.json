@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687474675943",
+    "project_id": "nikkiapurimarimari",
+    "storage_bucket": "nikkiapurimarimari.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687474675943:android:f79a153b6b88ffd3a4d242",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2FKesgXqi58RXnyauDiNn6ciMyfVtUDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
