@@ -10,3 +10,6 @@
 * Flutter (アプリ開発)
 * Firebase (データの保存)
 * Table Calendar (カレンダー機能)
+
+
+#原因対応再テスト結果19LineChartBarData で isCurved: true（曲線の描画）が有効なため、感情レベルが上限（5）や下限（1）に達した際、曲線のふくらみ制御点が minY・maxY の描画枠線を越えてはみ出してしまう。グラフを直線描画にするために isCurved: false に変更するか、曲線の一方ではみ出しを防ぐ preventCurveOverShooting: true を各 LineChartBarData に追加する。○
